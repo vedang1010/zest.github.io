@@ -6,13 +6,10 @@
   padding: 0;
 }
 
-/* html, body {
-  height: 100%;
-} */
+
 .demo {
   height: 100vh;
   background-attachment: fixed;
-  /* border: 2px solid red; */
 }
 
 #section07 {
@@ -22,9 +19,6 @@
   align-items: center;
   position: relative;
   background-attachment: fixed;
-  /* width: 100vw; */
-  /* height: 100vh; */
-  /* height: 100%; */
   animation: text-hide 2s ease-out alternate-reverse;
   animation-iteration-count: infinite;
 }
@@ -33,7 +27,6 @@
   0% {
     opacity: 0;
     text-shadow: 0px 0px 40px #fff;
-    /* -webkit-transform: scale(1.3); */
   }
 
   20%,
@@ -73,8 +66,6 @@
   text-align: center;
   white-space: nowrap;
 }
-
-/* #section07 { background: url(https://picsum.photos/1200/800?image=675) center center / cover no-repeat;} */
 
 #thanks {
   background-color: #fff;
@@ -122,6 +113,7 @@
   bottom: 40px;
   /* left: 50%; */
   z-index: 2;
+  justify-content: center;
   display: grid;
   -webkit-transform: translate(0, -50%);
   transform: translate(0, -50%);
@@ -131,7 +123,8 @@
   text-decoration: none;
   transition: opacity .3s;
 }
-.demo a span{
+
+.demo a span {
   display: flex;
   justify-content: center;
   /* align-items: center; */
@@ -143,10 +136,6 @@
 
 #section07 a {
   padding-top: 80px;
-  /* position: absolute; */
-  /* display: flex; */
-  /* flex-direction: column; */
-  /* grid-template-columns: auto auto auto; */
 }
 
 #section07 a span {
@@ -239,23 +228,37 @@
 /*  */
 
 #myBtn {
-  display: none; /* Hidden by default */
-  position: fixed; /* Fixed/sticky position */
-  bottom: 20px; /* Place the button at the bottom of the page */
-  right: 30px; /* Place the button 30px from the right */
-  z-index: 999; /* Make sure it does not overlap */
-  border: none; /* Remove borders */
-  outline: none; /* Remove outline */
-  background-color: rgb(34, 187, 229); /* Set a background color */
-  color: white; /* Text color */
-  cursor: pointer; /* Add a mouse pointer on hover */
-  padding: 15px; /* Some padding */
-  border-radius: 10px; /* Rounded corners */
-  font-size: 18px; /* Increase font size */
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Fixed/sticky position */
+  bottom: 20px;
+  /* Place the button at the bottom of the page */
+  right: 30px;
+  /* Place the button 30px from the right */
+  z-index: 999;
+  /* Make sure it does not overlap */
+  border: none;
+  /* Remove borders */
+  outline: none;
+  /* Remove outline */
+  background-color: rgb(34, 187, 229);
+  /* Set a background color */
+  color: white;
+  /* Text color */
+  cursor: pointer;
+  /* Add a mouse pointer on hover */
+  padding: 15px;
+  /* Some padding */
+  border-radius: 10px;
+  /* Rounded corners */
+  font-size: 18px;
+  /* Increase font size */
 }
 
 #myBtn:hover {
-  background-color: #555; /* Add a dark-grey background on hover */
+  background-color: #555;
+  /* Add a dark-grey background on hover */
 }
 
 
@@ -278,6 +281,7 @@
   padding: 50px;
   background: url(../images/concrete-road-surrounded-by-trees-831243.jpg);
 }
+
 .card__content {
   font-family: monospace;
   font-weight: 600;
@@ -285,11 +289,12 @@
   line-height: 30px;
   font-size: 1rem;
 }
+
 /* Common Mouse Scroll Ele */
 .scroll-down {
-  position: absolute;
+  /* position: absolute; */
   bottom: 50px;
-  left: 50%;
+  left: 47vw;
   width: 75px;
   height: 80px;
   text-align: center;
@@ -297,6 +302,26 @@
   cursor: pointer;
   bottom: 0;
   transform: translateX(-50%);
+}
+@media (max-width:800px) {
+  .scroll-down{
+    left: 46.6vw;
+  }
+}
+@media (max-width:680px) {
+  .scroll-down{
+    left: 45.1vw;
+  }
+}
+@media (max-width:550px) {
+  .scroll-down{
+    left: 44vw;
+  }
+}
+@media (max-width:380px) {
+  .scroll-down{
+    left: 40vw;
+  }
 }
 .scroll-down>label {
   pointer-events: none;
@@ -315,26 +340,35 @@
   left: calc(50% - 1px);
   animation: animateArrows 1.25s infinite linear;
 }
-@keyframes  animateArrows {
-  0%, 40%, 100% {
+
+@keyframes animateArrows {
+
+  0%,
+  40%,
+  100% {
     opacity: 0;
   }
+
   75% {
     opacity: 1;
   }
 }
+
 .scroll-down span:first-child {
   top: 35px;
   animation-delay: 0s;
 }
+
 .scroll-down span:nth-child(2) {
   top: 35px;
   animation-delay: .33s;
 }
+
 .scroll-down span:last-child {
-  top:  50px;
+  top: 50px;
   animation-delay: .66s;
 }
+
 .scroll-down span::before,
 .scroll-down span::after {
   position: absolute;
@@ -346,20 +380,14 @@
   background: #fff;
   border-radius: 3px;
 }
+
 .scroll-down span::before {
   transform-origin: bottom;
   transform: rotate(-45deg);
 }
+
 .scroll-down span::after {
   transform-origin: bottom;
   margin-left: -1px;
   transform: rotate(45deg);
 }
-  
-/*  */
-/*  */
-/*  */
-/*  */
-/*  */
-/*  */
-/*  */
