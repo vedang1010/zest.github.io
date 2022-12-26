@@ -1,8 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 html,body{
-  /* width: 100vw; */
-/* height: 450vh; */
-/* height: 100%; */
 margin: 0;padding: 0;}
 
 
@@ -196,4 +193,13 @@ img {
     width: 73vw;
     height: 28vh;
   }
+}
+.max-width{
+  background: transparent;
+}
+.name{
+  background: transparent;
+}
+.home-content{
+  background: transparent;
 }
