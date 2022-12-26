@@ -45,11 +45,8 @@ margin: 0;padding: 0;}
   padding: 0;
   box-sizing: border-box;
   background-color: #111;
-  /* width: 100%; */
-
   font-family: "supply";
   color: rgb(255, 255, 255);
-  /* font-weight: 400; */
   text-transform: uppercase;
 }
 
@@ -100,14 +97,14 @@ main {
   z-index: 120;
   transition: transform ease-in-out;
   transition-duration: 0.2s;
-  filter: grayscale(50%);
+  /* filter: grayscale(50%); */
   animation: movement  infinite infinite ease-in alternate;
 
 }
 
 .post:hover {
   transform: scale(1.19);
-  filter: grayscale(0%);
+  /* filter: grayscale(0%); */
 }
 
 img {
