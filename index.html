@@ -28,13 +28,91 @@
 
     <!-- <script src="./app.js"></script> -->
     <title>ZEST</title>
+    <!-- <style>
+        body {
+            height: auto;
+            margin: 0;
+          }
+          
+          ::-webkit-scrollbar {
+            background: #000000;
+            height: 5px;
+            width: 5px;
+          }
+          
+          ::-webkit-scrollbar-track {
+            box-shadow: inset 0 0 2px #000000;
+          }
+          
+          ::-webkit-scrollbar-thumb {
+            background: #005a2b;
+            border-radius: 2px;
+          }
+          
+          ::-webkit-scrollbar-thumb:hover {
+            background: #00b456;
+          }
+          
+          
+          .wrapper {
+            border: 1px solid #000000;
+            height: calc(100vh - 2px);
+            margin: 0 auto;
+            overflow-x: hidden;
+            overflow-y: scroll;
+            position: relative;
+            width: calc(100vw - 2.55px);
+          }
+          
+          .scroll-top {
+            background: #005a2b;
+            border: 0;
+            border-radius: 50%;
+            bottom: 0;
+            cursor: pointer;
+            height: 50px;
+            margin: 15px;
+            opacity: 0.75;
+            position: fixed;
+            right: -70px;
+            transition: right 0.2s ease-in-out;
+            width: 50px;
+            z-index: 99;
+          }
+          .scroll-top.visible {
+            right: 0;
+          }
+          
+          .arrow {
+            border: solid #000000;
+            border-width: 0 3px 3px 0;
+            display: inline-block;
+            margin-top: 5px;
+            padding: 4px;
+          }
+          .arrow.up {  
+            transform: rotate(-135deg);
+          }
+          
+          .content-container {
+            display: flex;
+            height: 300px;
+            width: 100%
+          }
+          
+          .content {
+            color: #ffffff;
+            font-size: 24px;
+            font-weight: bold;
+            margin: auto;
+          }
+    </style> -->
 </head>
 
 <body>
 
     <main class="">
-        <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
-
+        <i class="fas fa-chevron-up"></i>
 
         <section id="section07 home" class="demo home">
             <div class="max-width">
@@ -374,14 +452,14 @@
     </main>
 
     <!-- <script src="app.js"></script> -->
-    <script>
+    <!-- <script>
         $(function () {
             $('a[href*=#]').on('click', function (e) {
                 e.preventDefault();
                 $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top }, 500, 'linear');
             });
         });
-    </script>
+    </script> -->
 
     <script>
         function reveal() {
@@ -405,28 +483,28 @@
 
     <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
 
-    <script src="script.js"></script>
+    <!-- <script src="script.js"></script> -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
+    <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
     <script>
-        // Get the button:
-        let mybutton = document.getElementById("myBtn");
-
-        // When the user scrolls down 20px from the top of the document, show the button
-        window.onscroll = function () { scrollFunction() };
-
-        function scrollFunction() {
-            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                mybutton.style.display = "block";
-            } else {
-                mybutton.style.display = "none";
-            }
-        }
-
-        // When the user clicks on the button, scroll to the top of the document
-        function topFunction() {
-            document.body.scrollTop = 0; // For Safari
-            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-        }
+        $(document).ready(function () {
+            $(window).scroll(function () {
+                if ($(window).scrollTop() > 300) {
+                    $('i').css({
+                        "opacity": "1", "pointer-events": "auto"
+                    });
+                }
+                else {
+                    $('i').css({
+                        "opacity": "0", "pointer-events": "none"
+                    });
+                }
+            });
+            $('i').click(function () {
+                $('html').animate({ scrollTop: 0 }, 500)
+            });
+        });
     </script>
 
 </body>

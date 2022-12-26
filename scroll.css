@@ -226,42 +226,30 @@
 /*  */
 /*  */
 /*  */
-
-#myBtn {
-  display: none;
-  /* Hidden by default */
+i{
   position: fixed;
-  /* Fixed/sticky position */
-  bottom: 20px;
-  /* Place the button at the bottom of the page */
-  right: 30px;
-  /* Place the button 30px from the right */
-  z-index: 999;
-  /* Make sure it does not overlap */
-  border: none;
-  /* Remove borders */
-  outline: none;
-  /* Remove outline */
-  background-color: rgb(34, 187, 229);
-  /* Set a background color */
+  bottom: 40px;
+  right: 40px;
+  z-index: 1000;
+  font-size: 45px;
+  background:#0f55ed ;
   color: white;
-  /* Text color */
-  cursor: pointer;
-  /* Add a mouse pointer on hover */
-  padding: 15px;
-  /* Some padding */
-  border-radius: 10px;
-  /* Rounded corners */
-  font-size: 18px;
-  /* Increase font size */
+  padding: 7px 10px;
+  border-radius: 50%;
+  cursor:pointer;
+  opacity: 0;
+  pointer-events:none ;
+  transition: opacity 0.3s ease-in-out;
 }
-
-#myBtn:hover {
-  background-color: #555;
-  /* Add a dark-grey background on hover */
+@media (max-width:500px) {
+  i{
+    font-size: 35px;
+  }
 }
-
-
+i:hover{
+  background: #0d4aa5;
+  transition: 0.5s;
+}
 
 /*  */
 /*  */
